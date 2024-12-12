@@ -1,0 +1,16 @@
+Pivot- A pivot in an array is the point where the sum of the left of the array is equal to the sum of the right elemnts in an array.
+*Search in a rotated sorted array:-
+In this problem we need to find if an element is presentin a array but that sorted array is rotated by some elemnts.
+eg. arr={1,2,3,7,8} after rotation it becomes {7,8,1,2,3} lets say we need to find two in here.
+The aproach is that we will have two lines one of 7 and 8 and one of 1,2,3 so we will first find the pivot element.
+After finding the pivot element we will compare the key through pivot index to check if it exist between 7,8 or in 1,2,3 
+and then apply binary search in that region.
+*Square root by binary search:-
+To find a square root of a number by binary search we first take an array from 0 to that number than calculate its mid if the square of mid is greater than 
+number we will take end to mid-1 as it is a sorted array so all elements grater than mid will also be greater than number now if the mid is less
+than the number we will store the value of mid as it is a possible answer then upgrade the start to mid+1 and if mid=number than return mid.
+This approach only tells us about the integer part of the code. and ifthe value of mid is too large it will throw an error during square calculation so we 
+will use long long int instead.
+To calculate the fractional part use brute force- where you add 0.1 to the above answer and then square it to check if it is less then number then put in the
+answer variable then again add 0.1 till the square will be greater than the number. 
+If more precise soln is needed then add 0.01.
