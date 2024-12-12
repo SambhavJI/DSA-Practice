@@ -1,0 +1,8 @@
+Sorting-Process where you put elements of an arrat in increasing or decreasing order.
+Selection Sort - In selection sort we take an array eg.- arr[]={12,34,11,34,29} and take rounds where the first index of the array is swaped by smallest element of the array the the second index of the array is replaced by the next smallest element of the array and the process continues till the last element.
+So the total number of rounds is n-1.
+In the code the first loop it runs from first index to n-1th index and it initializes the first index then in the second loop if the a value smaller than the first index appears the value of minimum is changed until the smallest element comes and at last the elements are swaped.
+Space Complexity -O(1)
+Time Complexity - 0(n^2) because of nested loops.
+Best Case - If the array is already sorted -> O(n^2) -> same for worst case.
+Used when size is small or is memory constraint.
