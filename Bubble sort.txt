@@ -1,0 +1,8 @@
+Bubble Sort- In bubble sort we take an array and compare its first two elements if a>b then we wap a and b otherwise we ingnore the element.
+Lets say we have an arr arr[]={10,1,7,6,14,9} so in this case 10>1 so we swap the two variables then we will compare between b and c to see which is greater and thos process continues till the end of the array.
+This completes the round 1 of the bubble sort algorithm and the greatest element of the array is sorted so in the next round we will do the above process again in the array excluding the last element and this process continues till the first element is sorted.
+There are total n-1 rounds where n is the toral elemtns in the array.
+Time Complexity of the program is O(n^2) as nested loops are in the code.
+Space Complexity is O(1) as no extra space is taken by the code.
+Best case - if array is already sorted. O(n)
+It is a stable algorithm.
