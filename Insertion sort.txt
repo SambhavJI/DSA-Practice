@@ -1,0 +1,40 @@
+In insertion sort we take an array initialize its first element with the first index and then we compare the elements of next index that if it is smaller or greater then the first index element if it is less than the first index element we place it before the first one and if not we do not change anything.
+After that we take the next element and compare ir with the first two elements and the process goes on until the last element of the array and we have a sorted array.
+Insertion Sort in C++
+Insertion Sort is a simple sorting algorithm that builds the sorted array one element at a time. It is similar to the way we sort playing cards in our hands.
+
+The algorithm divides the input array into two parts:
+
+Sorted part: Initially contains only the first element.
+Unsorted part: Contains the rest of the array.
+Each iteration picks the first element from the unsorted part and inserts it into its correct position in the sorted part.
+
+Steps of Insertion Sort:
+Start with the second element (index 1), as the first element (index 0) is trivially sorted.
+Compare the current element with the elements in the sorted part.
+Shift all elements larger than the current element to one position to the right.
+Insert the current element into its correct position.
+Repeat for all elements in the unsorted part.
+Initialization:
+The first element (index 0) is already sorted.
+Iteration 1:
+Key = arr[1] = 11
+Compare with arr[0] = 12. Since 11 < 12, shift 12 to the right and place 11 in position 0.
+Iteration 2:
+Key = arr[2] = 13
+Compare with elements to the left. No shifting needed.
+Iteration 3:
+Key = arr[3] = 5
+Compare with elements to the left and shift all greater elements to the right.
+Continue until the array is sorted.
+Time Complexity:
+Best Case (Already Sorted): O(n)
+Worst Case (Reverse Sorted): O(n^2) 
+Maximum number of comparisons and shifts.
+Average Case: O(n^2)
+Space Complexity:Auxiliary Space:O(1) (in-place sorting).
+Advantages:
+Simple to implement.
+Efficient for small or nearly sorted datasets.
+Disadvantages:
+Not suitable for large datasets due to O(n^2).
