@@ -1,0 +1,25 @@
+STL can be used in competitive programmming .
+Array- array is created to store multiple elements in a list . #include <array> is used to call functions of an array . Array is never called like array <int,5>a ={} as it is static. 
+-> at(size_type n) - Returns a reference to the element at the specified position with bounds checking.
+-> operator[](size_type n)-Returns a reference to the element at the specified position without bounds checking.
+-> front()-Returns a reference to the first element.
+-> back()-Returns a reference to the last element.
+-> data()-Returns a pointer to the underlying array.
+->Vector- A vector can be used instead of an array , its main feature is to double its size ones the limit of the vector is reached, eg- you created a vector of length 5 and you have to a fill 6 elements so a vector double its size to fill the remaining elements.
+A vector is created by vector <int> n(size,initialize); n.size() is used to know the elemnts in a vector and .capacity is used to know the memory allocated to the vector.
+You can use push_back() and pop_back() to add or remove elemnts from a vector, u can also use pront and back to get the first and last element.
+To clear a vector u can use .clear it will empty the vector but capacity remains unchanged.
+->Deque- Double ended queue. In deque you can add or push elements for both front and back of the array.
+It is initialized by deque<int> d; , you can use .push_back and .push_front to add elemnt to last and first position similarly you can remove form first and last element.
+You can use .at to print element at a particular index and use .erase(start,end) to remove a range of elements for deque.
+->List- created by double linked list. you cannot directly .at opertion in list . it is created by list<int> l;
+You can use push_back and push_front to add element and .erase() to remove element.
+->Stack- A stack is a dataset where the first element comes out at last more like a stack of plates. Here the end element is the first element.
+You can use push and pop in a stack and s.top to get the topmost element. Initialized by stack<string> l;
+->Queue- It is like a line first in is first out. initialized by queue<int> l;
+You can use push and pop to remove the first element ftom the queue. 
+->Priority Queue- It works by heap. If you create a max heap than the element that comes out first is the maximum element same with the min heap.
+It is created by priority_queue<int> p; this creates a max heap which fetches the maxinmum element. To create a min heap priority_queue<int,vector<int> , greater<int> > m; is used.
+You can use push and pop .
+->Set- Only unique elemnts are stored inside set. If you put 5 times 3 the set will only contain one element i.e 3. Implemented by BST. There are two type of sets ordered (sorted) and unordered (unsorted).
+You can use .insert to insert elements and .count to check if a elemnent exists or not.
