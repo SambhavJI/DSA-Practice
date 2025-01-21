@@ -23,3 +23,11 @@ It is created by priority_queue<int> p; this creates a max heap which fetches th
 You can use push and pop .
 ->Set- Only unique elemnts are stored inside set. If you put 5 times 3 the set will only contain one element i.e 3. Implemented by BST. There are two type of sets ordered (sorted) and unordered (unsorted).
 You can use .insert to insert elements and .count to check if a elemnent exists or not.
+->Maps- In a map a key is mapped to a particular element eg. sambhav is mapped to BMW so sambhav cant be mapped with another value but Trivedi can be mapped with BMW as it is a diffrent key.
+Initialized by map <int,string> m; to insert elements use m[key]="element". Use .insert(key,element) to add element and .first to print the values of key and .second() to print the values of elements. Use .count to find an element. Use .erase to remove key and element.
+The time complexity of the above functions is O(log n) but the count function in case of unoredered map has complexity of O(1) due to its relation with hashtable.
+->Algorithms-List of some algorithms that can save our time in contests. 
+Binary Search- Initialize a sorted vector. To use binary search create a vector v and type binary_search(v.begin(),v.end(),element to be found) it returns true or false.
+Swap- Swap(a,b) to swap the elements a and b. Also you can use max and min to find maximum and minimum of two elements. 
+Reverse- Reverse(a.begin(),a.end()) to reverse a string or a number.
+Sort- sort(v.begin(),v.end()) to sort an array. Based on intro sort.
