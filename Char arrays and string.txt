@@ -1,0 +1,11 @@
+If we want to store multiple characters we make use of char array which is similar to a int array.
+A string can also be used to store multiple charachter and can be called 1-D char array.
+Charachter is created similarly as int array (char arr(10)).To take in input in a char array just use cin >> arr; and type the name you want.
+Eg you made a char array of 10 chars and stored sambhav inside it so it will store the name as a single char at an index and the remaining indexes are filled with null char '/o' ascii value 0. 
+When null char comes the execution or reading of a char array stops and the indexes before it are printed.
+To reverse an array we have to do the same thing as to reverse int array ie to swap first and last element and so on.
+A palindrome is a string whichis same even after reversed. To check a palindrome in a string of sentence we will first remove all the unwanted charachters.To do that we will make a function that runs through the string and keeps the char if it is b/w 'a'and'z','A'and'Z'and'0'to'9'.
+after that we can either reverse the new string to check if it is a palindrome. 
+To check the maximum number of charachter occuring in a string we first create an array of size 25 and then we traverse throught the string and inside the loop body we subtract the value of the string element by 'a' to get an integer value and after the whole string is traversed we store all the values we got in the array we created and finally get the maximum occuring element.
+To get the whole sentence inside the string we use cin.getline(string,len) function.
+strlen()-> gets length of the string , strcomp()->compares two string to see if they are equal, 

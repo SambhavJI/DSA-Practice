@@ -1,0 +1,10 @@
+Pointers are the adresses of memeory blocks where the variable is mapped to an particular element where the element can be accesed from.
+Adress of operator(&)- used to print adress of a variable or adress of the Pointer.(int a = &num;)
+Pointer stores adress of an element, initialized by (int *ptr = &i;) this ptr pointer stores the adress of i.You can use *ptr to print the value at the adress and use ptr to print the adress.
+Size of pointer in 8 byte for all data types. You cannot access a null pointer.If we use (*ptr++) it will change the value of the element at the index. If we say that ptr=ptr+1 it will point to the adress of next element, it will point to the integer at next adress.
+Lets say we have created an integer array of 10 elements calles arr now to print the adress of first eleement we can simply write cout << arr; it will print the adress of the 0th index, we can also use &arr[0]; to print the adrress of 0th index.
+If we write *arr it prints the value of element at 0th index, if we want the element at first index we do *(arr +1) , *arr +1 gives us the value of arr[0]+1.i[arr]=(arr+i).
+The size of an complete array when returned through size of operator is equal to 40 bytes but when we take the pointer of the array it uses only 8 bytes of storage and when we print the value it takes storage space according to the datatype.
+The content of symbol table cannot be changed,eg if we created an array of size 10 and the adress of first index is stored in arr so if we do arr=arr +1 it will throw an error so we cannot change the value of the adress.
+In case of char array is we use arr to print the value of adress of first value it will print the value of the complete array,it will give tthe same sanwer when the adress of first element is stored inside a variable and then  the variable is print.
+Pointers can be passed to a function , if we updated a value of a pointer inside a function the value of the pointer will not change if we print it in the main function, if we really wanted to update the value of the pointer inside a function we should update *p as *p+1.
