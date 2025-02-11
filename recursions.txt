@@ -1,0 +1,5 @@
+When a function calls itself it is called recursion. Base case tells us that when we have to stop the recursion.If if we dont give base case segmentation error will happen. 
+Watch video lec31 for recursion tree and how recursion works,recursive function consist of three parts i.e base case , processing part and recursive part.
+if the processing part is above the recursive part then the recurrsion is called tail recrrusion othewise it is called head recursion.
+Climb Stairs Problem->In this problem we need to find the minimum number of ways in which you can climb stairs upto n. To solve this in more optimized way we need to know concepts of DP. The recursive way to solve this is to find the base case when n is less than 0 we return 0 as there are no stairs below zero and if n is 0 then we return 1 as their are exacty one way to climb the first stair and the recursion condition is calling the n-1 and n-2 cases as there are these two ways to climb the nth stair.
+ 
