@@ -1,0 +1,18 @@
+In merge sort we have to sort an array.We will find out mid and break the array just as we did in the binary search and this go on until all the elements are sepereted.
+Now we will merge the elements in the reverse order in which we broke and put them in increasing order one by one therefore we will have a sorted array.
+There are thwo approaces to solve this problem , one is where we break the array in two ports sort them via recursion and merge them like in the question merge two sorted arrays.
+Now in the code of mergeSort.cpp we created a merge function which merges two sorted arrays where we carate two new arrays, then we copied the elemnts of the main array into the two arrays via a for loop.
+Then we will use a for loop an put the smallest element of the two arrays into our new array then we increment the index of all the three array, if any of the two arrays is bigger than we also used a while loop to put the extra elements.The purpose of these loops is to handle any leftover elements from the two subarrays.
+MergeSort Function -> 
+Merge Sort follows three main steps:
+1️⃣ Divide (Recursion)
+We keep dividing the array into two halves until each subarray has only one element (base case).
+Since an array with one element is already sorted, we stop dividing when s >= e.
+2️⃣ Conquer (Sorting)
+We assume that the left and right halves are already sorted (since we sorted them recursively).
+Now, we merge these two sorted halves into one fully sorted subarray using the merge function.
+3️⃣ Combine (Merging)
+The merge function takes two sorted subarrays and merges them into a single sorted subarray.
+The Time complexity of this algorithm is O(nlogn)-> It follows devide and conquer algorithm which means its complexity depends on deviding the array(O(logn)) and merging the elements (O(n)) It is the fastest sorting algo.
+Space complexity -> As we used extra array so space complexity in O(n).
+It is a stable algorithm.
