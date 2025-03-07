@@ -1,0 +1,105 @@
+This is also a sorting algorithm.Here we take one pivot element and find all the elements in the array less than the pivot element and store it in a variable p and then place the pivot in the pth index.
+Now we wil place all the elements lesser than pivot in the array left of pivot and bigger elements in the right part , therefore sorting the pivot element. This will keep on going until the array is sorted.
+Step 1: Understanding the Quick Sort Process
+Quick Sort is a divide and conquer algorithm, which means it breaks the problem into smaller subproblems, solves them individually, and then combines the results. The key idea in Quick Sort is to:
+Select a Pivot Element (in this code, the first element is chosen as the pivot).
+Partition the Array around the pivot:
+Elements less than or equal to the pivot move to the left.
+Elements greater than the pivot move to the right.
+The pivot is then placed in its correct sorted position.
+Recursively Sort the left and right subarrays using the same process.
+Step 2: Breaking Down the Code
+Now, let’s analyze each function line by line to understand what is happening.
+(A) Partition Function->The partition() function rearranges the array based on the pivot.
+->int partition(int arr[], int s, int e) {}
+It takes an array arr[], the start index s, and the end index e as parameters.
+It divides the array into two parts: left (smaller than or equal to pivot) and right (greater than pivot).
+Choosing Pivot->int pivot = arr[s];  
+The pivot is chosen as the first element (arr[s]).
+Counting Smaller Elements->
+->  int cnt = 0;
+    for(int i = s+1; i<=e; i++) {
+        if(arr[i] <= pivot) {
+            cnt++;
+        }
+    }
+This loop counts how many elements are less than or equal to the pivot.cnt stores the count of such elements.Placing the Pivot at the Correct Position.
+->  int pivotIndex = s + cnt;
+    swap(arr[pivotIndex], arr[s]);
+The pivot is moved to its correct position (pivotIndex).The swap() function exchanges arr[s] (pivot) with arr[pivotIndex], so the pivot is placed in the sorted position.
+Arranging Left and Right Subarrays->int i = s, j = e;
+Two pointers i (starting from s) and j (starting from e) are used to adjust misplaced elements.
+Swapping Elements to Maintain Order->while(i < pivotIndex && j > pivotIndex) {}
+The left side should have elements ≤ pivot, and the right should have elements > pivot.
+We traverse the array using i and j.
+        while(arr[i] <= pivot) {
+            i++;
+        }
+
+        while(arr[j] > pivot) {
+            j--;
+        }
+Move i right until we find an element greater than the pivot (which needs to go to the right).Move j left until we find an element less than or equal to the pivot (which needs to go to the left).
+        if(i < pivotIndex && j > pivotIndex) {
+            swap(arr[i++], arr[j--]);
+        }
+If i is still left of the pivot and j is right, swap arr[i] and arr[j].i++ and j-- ensure the loop moves forward.
+Returning Pivot's Final Position
+    return pivotIndex;
+This returns the index where the pivot is placed.
+(B) Quick Sort Function ->This is the recursive function that applies Quick Sort to subarrays.
+->void quickSort(int arr[], int s, int e) {}->Takes the array arr[], the start index s, and the end index e as input.
+Base Case (Stopping Condition)->if(s >= e) 
+        return;
+If the subarray has one or zero elements, return immediately (it is already sorted).
+Partitioning the Array
+-> int p = partition(arr, s, e);
+Calls partition() to rearrange the elements.p stores the final position of the pivot.
+Recursive Calls
+->  quickSort(arr, s, p-1);
+    quickSort(arr, p+1, e);
+Sorts the left part [s, p-1] (everything left of the pivot).Sorts the right part [p+1, e] (everything right of the pivot).This process continues until all elements are sorted.
+(C) Main Function
+This function initializes the array and calls quickSort().
+int main() {
+    int arr[10] = {2,4,1,6,5,10,9,9,9,9};
+    int n = 10;
+Defines an array arr[] with 10 elements.
+Sorting the Array
+->   quickSort(arr, 0, n-1);
+Calls quickSort() on the entire array from index 0 to n-1.
+Printing the Sorted Array
+->  for(int i=0; i<n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+Iterates through arr[] and prints the sorted numbers.
+Step 3: Dry Run (Example Walkthrough)
+Let's run Quick Sort on: arr = {2,4,1,6,5,10,9,9,9,9}
+1st Call: quickSort(arr, 0, 9)
+Pivot = 2
+Elements ≤ 2: {1}
+Pivot placed at index 1
+Left: {1}
+Right: {4,6,5,10,9,9,9,9}
+2nd Call: quickSort(arr, 2, 9)
+Pivot = 4
+Elements ≤ 4: {4}
+Pivot placed at index 2
+Left: {} (empty)
+Right: {6,5,10,9,9,9,9}
+Further Steps
+This process continues recursively, sorting subarrays.
+Final sorted array: {1, 2, 4, 5, 6, 9, 9, 9, 9, 10}
+Step 4: Complexity Analysis
+Case	Complexity
+Best Case (Balanced Partitions)	O(n log n)
+Average Case	O(n log n)
+Worst Case (Already Sorted, Unbalanced Partitions)	O(n²)
+Average case O(n log n) happens when partitions are evenly balanced.
+Worst case O(n²) occurs when the pivot always ends up at one extreme (e.g., already sorted input).
+Step 5: Key Takeaways
+✅ Efficient Sorting with O(n log n) in most cases.
+✅ In-Place Sorting (no extra space needed).
+✅ Recursion-Based (calls itself on smaller subarrays).
+❌ Worst-case O(n²) if pivot selection is bad.
