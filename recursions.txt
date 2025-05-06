@@ -10,4 +10,10 @@ Here we will do the same problems that we did in strings but with recursion.
 Reverse String -> To reverse string via recursion the base case will be when start of string is greater than end index of string, now we will swap the elements at start and end index and after that in the recursive call we will call the function again and in place of start we will use start++ and end--.You have to pass the value in the function by reference to make the function work.
 Check Palindrome-> To check palindrome in a a string we will have the same logic as reverse but instead of swapping we will compare them to check if both are same then make start++ and end-- in recursive call.
 Bubble Sort -> To solve this throgh recursion the base case will be when the size is 0 or 1 we will return true as the array will be already sorted, now we will use a for loop to check if arr[i]>arr[i+1] and if yes we will swap the elements, now in the recursive relation we will ass the array in the function with size n-1.
- 
+
+How to solve subsets question on leetcode:- 
+Lets say we have an array of elements {1,2,3} to solve this we will first take an empty set along with our given set in the first steep we will exclude the first element i.e 1 in the empty subset whichwill make two cases {1,2,3} and {empty} side by side we will take another route and include the first elemnt in the subset so the cases will be {1,2,3} and{1}. 
+Now as we have two diffrent cases we will again apply the same logic on the second element and this will keep on going until the whole array is traversed and the number of cases handled will be the total number of substs of the question. This will be solve via recursion.
+
+How to solve Subsequences in a string problem :-
+To solve this question we will use recurrsion here again we will apply the same logic of excluding or including. The base case will be when the index is greater than the string. Lets say we have a string "abc" first we exclude "abc" "" and the index will be at be and then we will include and get "abc","a" and index will be at b , after that we will use recursions to find all the possible values.
