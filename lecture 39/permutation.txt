@@ -1,0 +1,6 @@
+Permutations of a string question :-
+In this we will be given a string as an input lets say "abc" and we will have to find all the possible permutaions of it {"abc","acb","bac","bca","cab","cba"} as output.
+There are twoways to solve this problem in the first we can use maps but it is not optimized. TO solve this problem we will take the first index of the string and try to put each elemnt of the string at that place , for eg in the string "abc" first we will put a then swap a with b to put b at first place and then swap a with c to put c at first place this will give us three cases.
+Then we will do increment in the index and go to the second index and do the same thing , lets say we put a in the first index in out first step now in the next step we have two options one is to put b in the second index by swapping it by itself and the other is to swap it with c to put c at the second index , same thing we will do with the othr cases where b and c are at the first index and after that we will do increment in the index, and when the index is at last place we will swap it by itself which will then give us the answer.
+We will do thiss by recursion where the base case will be when the index i greater then the length of the string.
+We are doing backtrack to retain the orignal state for further cases.
